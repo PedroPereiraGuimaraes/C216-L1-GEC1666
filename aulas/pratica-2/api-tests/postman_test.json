@@ -69,7 +69,7 @@
 		{
 			"id": "ef0f9631-74dd-4d9e-98bf-627566f5b082",
 			"name": "Path Params",
-			"url": "http://localhost:5000/api/v1/params/Lucas_GES134",
+			"url": "http://localhost:5000/api/v1/params/Pedro_GEC1666",
 			"time": 4,
 			"responseCode": {
 				"code": 200,
@@ -96,7 +96,7 @@
 		{
 			"id": "08ff334f-ffa2-4246-a991-bf924d6f2444",
 			"name": "Query Params",
-			"url": "http://localhost:5000/api/v1/query?name=Lucas_GES134",
+			"url": "http://localhost:5000/api/v1/query?name=Pedro_GEC1666",
 			"time": 12,
 			"responseCode": {
 				"code": 200,
