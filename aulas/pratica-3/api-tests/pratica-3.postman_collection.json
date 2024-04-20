@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "88aca863-b667-4bbd-b3ae-8eac9becdc36",
+		"name": "pratica-3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33802402"
+	},
+	"item": [
+		{
+			"name": "POST PROFESSOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Pedro\",\r\n    \"disciplina\": \"C312\",\r\n    \"email\": \"pedro@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/v1/professor/inserir"
+			},
+			"response": []
+		},
+		{
+			"name": "GET PROFESSOR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/v1/professor/listar"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PROFESSOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"João\",\r\n    \"disciplina\": \"C312\",\r\n    \"email\": \"john@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/v1/professor/atualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PROFESSOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/v1/professor/excluir"
+			},
+			"response": []
+		}
+	]
+}
