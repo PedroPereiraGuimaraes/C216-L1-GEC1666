@@ -1,15 +1,15 @@
 {
-    "name": "pratica-2",
-    "version": "1.0.0",
-    "description": "Middleware com restify.js",
-    "main": "index.js",
-    "scripts": {
-      "start": "node src/index.js",
-      "test": "Não há testes configurados"
-    },
-    "dependencies": {
-      "restify": "^8.5.1"
-    },
-    "author": "Pedro GEC 1666",
-    "license": "ISC"
-  }
+  "name": "pratica-4",
+  "version": "1.0.0",
+  "description": "Crud com restify.js e PostgreSQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "restify": "^8.5.1",
+    "pg": "^8.11.5"
+  },
+  "author": "Pedro Pereira Guimaraes GEC-1666",
+  "license": "ISC"
+}
