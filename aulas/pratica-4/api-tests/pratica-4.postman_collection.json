@@ -8,6 +8,20 @@
 	"item": [
 		{
 			"name": "POST PROFESSOR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -39,12 +53,26 @@
 		},
 		{
 			"name": "POST UPDATE PROFESSOR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"Pedro\",\r\n    \"materia\": \"Quimica\",\r\n    \"dataNascimento\": \"10/01/2002\"\r\n}",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"Pedro\",\r\n    \"materia\": \"Quimica\",\r\n    \"dataNascimento\": \"10/01/2002\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -70,6 +98,20 @@
 		},
 		{
 			"name": "POST DELETE PROFEESOR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -101,6 +143,20 @@
 		},
 		{
 			"name": "DELETE RESET DATABASE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -123,6 +179,20 @@
 		},
 		{
 			"name": "GET LIST PROFESSOR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
