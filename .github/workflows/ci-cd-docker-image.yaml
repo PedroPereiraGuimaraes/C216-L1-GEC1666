@@ -3,11 +3,11 @@ name: Docker Build Images
 on:
   workflow_dispatch:
     inputs:
-        manual_deploy:
-          description: "Manual Deploy"
-          required: true
-          type: boolean
-          default: true
+      manual_deploy:
+        description: "Manual Deploy"
+        required: true
+        type: boolean
+        default: true
   push:
     branches:
       - project
