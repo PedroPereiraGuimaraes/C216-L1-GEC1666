@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  backend:
+    container_name: "backend"
+    restart: always
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      DB_USER: root
+      DB_PASSWORD: op7yZkjqCmS02y6G
+
+  frontend:
+    container_name: "frontend"
+    restart: always
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      API_NEWS_URL: http://backend:5000/news

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adicionar Notícia</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #202020;
+      color: #FFFFFF;
+    }
+    .navbar {
+      background-color: #FFD100;
+    }
+    .card {
+      background-color: #333532;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">Notícias</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Notícias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/add">Adicionar Notícia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/edit">Editar Notícia</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Atualizar Notícia</h1>
+    <form action="/update/{{ news }}" method="POST">
+      <div class="form-group">
+        <label for="title">Título:</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Titulo da notícia">
+      </div>
+      <div class="form-group">
+        <label for="content">Descrição:</label>
+        <textarea type="text" class="form-control" id="content" name="content" rows="5" placeholder="Descrição da notícia"></textarea>
+      </div>
+      <button type="submit" value="update" class="btn btn-primary">Atualizar</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícias</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #333532;
+      color: #FFFFFF;
+    }
+    .navbar {
+      background-color: #FFD100;
+    }
+    .card {
+      background-color: #202020;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">Notícias</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Notícias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/add">Adicionar Notícia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/edit">Editar Notícia</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  {% if news %}
+    <div class="container">
+      <h1>Lista de Notícias</h1>
+      {% for info in news %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ info.title }}</h5>
+            <p class="card-text">{{ info.content }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="container">
+      <h1>Nenhuma notícia cadastrada</h1>
+    </div>
+  {% endif %}
+</body>
+</html>
