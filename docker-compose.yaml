@@ -4,7 +4,7 @@ services:
   backend:
     container_name: "backend"
     restart: always
-    build: ./backend
+    image: pedropeguimaraes/news_backend:v1
     ports:
       - "5000:5000"
     environment:
@@ -14,7 +14,7 @@ services:
   frontend:
     container_name: "frontend"
     restart: always
-    build: ./frontend
+    image: pedropeguimaraes/news_frontend:v1
     ports:
       - "3000:3000"
     depends_on:
