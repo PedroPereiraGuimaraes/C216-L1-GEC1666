@@ -2,6 +2,12 @@ name: Docker Build Images
 
 on:
   workflow_dispatch:
+    inputs:
+        manual_deploy:
+          description: "Manual Deploy"
+          required: true
+          type: boolean
+          default: true
   push:
     branches:
       - project
@@ -29,11 +35,11 @@ jobs:
       with:
         context: ./frontend
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/news_frontend:v1
+        tags: ${{ secrets.DOCKER_USERNAME }}/news_frontend:latest
 
     - name: Build and push Docker image Backend
       uses: docker/build-push-action@v2
       with:
         context: ./backend
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/news_backend:v1
+        tags: ${{ secrets.DOCKER_USERNAME }}/news_backend:latest
